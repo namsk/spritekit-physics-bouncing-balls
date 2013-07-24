@@ -18,8 +18,8 @@
 }
 
 - (SKSpriteNode *)createFloor {
-    SKSpriteNode *floor = [SKSpriteNode spriteNodeWithColor:[SKColor brownColor] size:CGSizeMake(self.frame.size.width, 20)];
-    [floor setAnchorPoint:CGPointMake(0, 0)];
+    SKSpriteNode *floor = [SKSpriteNode spriteNodeWithColor:[SKColor brownColor] size:(CGSize){self.frame.size.width, 20}];
+    [floor setAnchorPoint:(CGPoint){0, 0}];
     [floor setName:@"floor"];
     [floor setPhysicsBody:[SKPhysicsBody bodyWithEdgeLoopFromRect:floor.frame]];
     floor.physicsBody.dynamic = NO;
