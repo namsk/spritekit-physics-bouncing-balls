@@ -31,9 +31,9 @@
     SKShapeNode *ball = [SKShapeNode node];
     
     //  Draw ball and set it to SKShapeNode
-    CGPathRef thePath = CGPathCreateWithEllipseInRect((CGRect){-20, -20, 40, 40}, NULL);
-    [ball setPath:thePath];
-    CGPathRelease(thePath);
+    CGPathRef path = CGPathCreateWithEllipseInRect((CGRect){{-20, -20}, {40, 40}}, NULL);
+    [ball setPath:path];
+    CGPathRelease(path);
     
     [ball setPosition:location];
     [ball setName:@"ball"];
