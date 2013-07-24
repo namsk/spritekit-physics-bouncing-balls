@@ -22,20 +22,31 @@
     [floor setAnchorPoint:CGPointMake(0, 0)];
     [floor setName:@"floor"];
     [floor setPhysicsBody:[SKPhysicsBody bodyWithEdgeLoopFromRect:floor.frame]];
+    floor.physicsBody.dynamic = NO;
     
     return floor;
 }
 
 - (SKShapeNode *)createBall:(CGPoint)location {
     SKShapeNode *ball = [SKShapeNode node];
+    
+    //  Draw ball and set it to SKShapeNode
     CGPathRef thePath = CGPathCreateWithEllipseInRect((CGRect){-20, -20, 40, 40}, NULL);
     [ball setPath:thePath];
     CGPathRelease(thePath);
+    
     [ball setPosition:location];
     [ball setName:@"ball"];
+    
+    //  Set up physics body of ball object.
     [ball setPhysicsBody:[SKPhysicsBody bodyWithCircleOfRadius:20.0]];
     ball.physicsBody.dynamic = YES;
     ball.physicsBody.restitution = 0.7;
+//  Important properties of PhysicsBody
+//      ball.physicsBody.mass = 0;    //  mass of physics object
+//      ball.physicsBody.density = 0;     //  density of physics object: defaul 1.0
+//      ball.physicsBody.friction = 0;    //  friction of physics object: 0.0 ~ 1.0
+//      ball.physicsBody.restitution = 0; //  restitution(bounciness) of physics object: 0.0 ~ 1.0 : default 0.2
     
     return ball;
 }
