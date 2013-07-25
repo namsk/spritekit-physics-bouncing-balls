@@ -12,7 +12,7 @@
 - (id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         [self addChild:[self createFloor]];
-        [self setPhysicsBody:[SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame]];
+//        [self setPhysicsBody:[SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame]];  //  Physics body of Scene
     }
     return self;
 }
