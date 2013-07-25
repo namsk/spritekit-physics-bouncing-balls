@@ -54,7 +54,10 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
-        [self addChild:[self createBall:location]];
+        SKSpriteNode * floor = (SKSpriteNode *)[self childNodeWithName:@"floor"];
+        if (![floor containsPoint:location]) {
+            [self addChild:[self createBall:location]];
+        }
     }
 }
 
