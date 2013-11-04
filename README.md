@@ -12,5 +12,5 @@ Change the properties on the physics body of the ball and then watch the differe
 
 ##Requirements:
 
-* Xcode 5 (Developer Preview 5 Tested)
-* iOS 7 SDK (Beta 5 Tested)
+* Xcode 5 
+* iOS 7 SDK 
