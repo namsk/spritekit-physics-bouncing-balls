@@ -2,6 +2,8 @@
 
 A demo for using physics system of SpriteKit.
 
+* There is a [swift port version](https://github.com/namsk/spritekit-swift-physics-bouncing-balls) of this project available.
+
 ## Simulation Tips:
 
 If you want to make the balls stay inside of the scene, unremark the third line in the `initWithSize` method of the BouncingScene.m as follows:
@@ -12,5 +14,5 @@ Change the properties on the physics body of the ball and then watch the differe
 
 ##Requirements:
 
-* Xcode 5 
-* iOS 7 SDK 
+* Xcode 5 or higher
+* iOS 7 SDK or higher

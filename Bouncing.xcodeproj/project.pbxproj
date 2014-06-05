@@ -470,6 +470,7 @@
 				94214D33179F8D1000F2FE8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94214D34179F8D1000F2FE8E /* Build configuration list for PBXNativeTarget "BouncingTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +479,7 @@
 				94214D36179F8D1000F2FE8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
