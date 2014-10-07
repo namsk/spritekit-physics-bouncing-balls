@@ -28,25 +28,28 @@
 }
 
 - (SKShapeNode *)createBall:(CGPoint)location {
-    SKShapeNode *ball = [SKShapeNode node];
-    
+    SKShapeNode *ball = [SKShapeNode shapeNodeWithCircleOfRadius:20.0];
+    SKShapeNode *positionMark = [SKShapeNode shapeNodeWithCircleOfRadius:6.0];
     //  Draw ball and set it to SKShapeNode
-    CGPathRef path = CGPathCreateWithEllipseInRect((CGRect){{-20, -20}, {40, 40}}, NULL);
-    [ball setPath:path];
-    CGPathRelease(path);
     
     [ball setPosition:location];
     [ball setName:@"ball"];
+    [ball setFillColor:[UIColor whiteColor]];
     
     //  Set up physics body of ball object.
     [ball setPhysicsBody:[SKPhysicsBody bodyWithCircleOfRadius:20.0]];
     ball.physicsBody.dynamic = YES;
     ball.physicsBody.restitution = 0.7;
+    
 //  Important properties of PhysicsBody
 //      ball.physicsBody.mass = 0;    //  mass of physics object
 //      ball.physicsBody.density = 0;     //  density of physics object: defaul 1.0
 //      ball.physicsBody.friction = 0;    //  friction of physics object: 0.0 ~ 1.0
 //      ball.physicsBody.restitution = 0; //  restitution(bounciness) of physics object: 0.0 ~ 1.0 : default 0.2
+    
+    positionMark.fillColor = [SKColor blackColor];
+    positionMark.position = CGPointMake(0, -12);
+    [ball addChild:positionMark];
     
     return ball;
 }
